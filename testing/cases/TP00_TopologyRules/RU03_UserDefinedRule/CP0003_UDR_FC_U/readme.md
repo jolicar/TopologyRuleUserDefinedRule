@@ -4,7 +4,7 @@
 
 ### Description
 
-This test case checks the topology rule when we use incorrect 2D point datasets and correct 2D polygon dataset. One polygon dont have any internal point and other polygon has two internal points. The final result has errors.
+This test case checks the user corrective action on UDR when we have a record on *Inspector de errores del Plan de topologia* window.
 
 ### Requirements
 
