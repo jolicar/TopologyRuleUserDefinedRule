@@ -1,4 +1,4 @@
-## TP00RU03CP0001 Test that 2D points are inside 2D polygons but one polygon dont have any internal point.
+## TP00RU03CP0001 Test the user check expression if 2D points are inside 2D polygons but one polygon dont have any internal point.
 
 [First, check the open issues of this test](https://redmine.gvsig.net/redmine/projects/gvsig-desktop/issues?utf8=%E2%9C%93&set_filter=1&f%5B%5D=status_id&op%5Bstatus_id%5D=o&f%5B%5D=subject&op%5Bsubject%5D=%7E&v%5Bsubject%5D%5B%5D=TP00RU03CP0001&f%5B%5D=&c%5B%5D=tracker&c%5B%5D=status&c%5B%5D=priority&c%5B%5D=subject&c%5B%5D=assigned_to&c%5B%5D=updated_on&group_by=)
 
@@ -38,5 +38,6 @@ The expected results are the *Inspector de errores del Plan de topologia* window
 In case the obtained results are not correct, you can report an issue on *redmine* of *gvSIG deskop*. You can locate at
 https://redmine.gvsig.net/redmine/projects/gvsig-desktop/issues .
 
-[Open a a new issue of this test](https://redmine.gvsig.net/redmine/projects/gvsig-desktop/issues/new?issue[subject]=TP00RU03CP0001+Test+that+2D+points+are+inside+2D+polygons+but+one+polygon+dont+have+any+internal+point)
+[Open a a new issue of this test](https://redmine.gvsig.net/redmine/projects/gvsig-desktop/issues/new?issue[subject]=TP00RU03CP0001+Test+the+user+check+expression+if+2D+points+are+inside+2D+polygons+but+one+polygon+dont+have+any+internal+point.
+)
 
