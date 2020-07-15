@@ -5,7 +5,6 @@
 ### Description
 
 This test case checks the UDR when we use incorrect 2D point datasets and correct 2D polygon dataset. The case has errors in the final result because the polygon dataset has one polygon with no internal points. The check expression seeks at least one internal point in each polygon.
-One polygon dont have any internal point. The final result has errors.
 
 ### Requirements
 
