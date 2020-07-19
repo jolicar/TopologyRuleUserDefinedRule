@@ -17,17 +17,16 @@ This test case checks the user corrective action on UDR when we have a record on
 3. Create a new empty topology plan.
 4. Fill the basic topology plan data.
 5. Add the **TP00RU03CP0003_pol2D_C.csv** file like a dataset.
-6. Add the **TP00RU03CP0003_pts2D_I.csv** file like a dataset.
-7. Add a new rules parameters on Rules tab.
-8. On those rule parameters identify the *primary dataset*, the *second dataset*, the *User defined topology rule* and the *tolerancy*. This tolerancy can be zero or greater.
-9. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
-10. Add the user check expression.
-11. Add the user corrective formula.
-12. Click on the "Ok" button.
-13. Click on the "Ok" button to finish the topology plan creation.
-14. Execute the topology plan.
-15. On *Inspector de errores del Plan de topologia* window select the only one record.
-16. Click on *Acciones* icon and select *User Action*.
+6. Add a new rules parameters on Rules tab.
+7. On those rule parameters identify the *primary dataset*, the *User defined topology rule*. 
+8. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
+9. Add the user check expression with expression builder; EXISTS( SELECT * FROM TP00RU03CP0000_pts2D_C WHERE ST_INTERSECTS(ST_FORCE2D(TP00RU03CP0000_pts2D_C.GEOMETRY), ST_FORCE2D(GEOMETRY())) LIMIT 1).
+10. Add the user corrective action.
+11. Click on the "Ok" button.
+12. Click on the "Ok" button to finish the topology plan creation.
+13. Execute the topology plan.
+14. On *Inspector de errores del Plan de topologia* window select the only one record.
+15. Click on *Acciones* icon and select *User Action*.
 
 ### Expected result
 

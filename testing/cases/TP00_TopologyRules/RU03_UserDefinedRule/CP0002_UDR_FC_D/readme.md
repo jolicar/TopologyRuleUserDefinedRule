@@ -10,6 +10,7 @@ This test case checks the delete corrective action on UDR when we have a record 
 
 1. Have *gvSIG desktop 2.5.1* and *Topology framework plugin* installed.
 2. Have acces to [**TP00RU03CP0002_pol2D_C.csv**](https://github.com/jolicar/TopologyRuleUserDefinedRule/blob/master/testing/cases/TP00_TopologyRules/RU03_UserDefinedRule/CP0002_UDR_FC_D/TP00RU03CP0002_pol2D_C.csv) and [**TP00RU03CP0002_pts2D_I.csv**](https://github.com/jolicar/TopologyRuleUserDefinedRule/blob/master/testing/cases/TP00_TopologyRules/RU03_UserDefinedRule/CP0002_UDR_FC_D/TP00RU03CP0002_pts2D_I.csv).
+
 ### Steps...
 
 1. Load the layer **TP00RU03CP0002_pol2D_C.csv** in the view.
@@ -17,16 +18,15 @@ This test case checks the delete corrective action on UDR when we have a record 
 3. Create a new empty topology plan.
 4. Fill the basic topology plan data.
 5. Add the **TP00RU03CP0002_pol2D_C.csv** file like a dataset.
-6. Add the **TP00RU03CP0002_pts2D_I.csv** file like a dataset.
-7. Add a new rules parameters on Rules tab.
-8. On those rule parameters identify the *primary dataset*, the *second dataset*, the *User defined topology rule* and the *tolerancy*. This tolerancy can be zero or greater.
-9. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
-10. Add the user check expression.
-11. Click on the "Ok" button.
-12. Click on the "Ok" button to finish the topology plan creation.
-13. Execute the topology plan.
-14. On *Inspector de errores del Plan de topologia* window select the only one record.
-15. Click on *Acciones* icon and select *Delete Action*.
+6. Add a new rules parameters on Rules tab.
+7. On those rule parameters identify the *primary dataset*, the *User defined topology rule*. 
+8. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
+9. Add the user check expression with expression builder; EXISTS( SELECT * FROM TP00RU03CP0000_pts2D_C WHERE ST_INTERSECTS(ST_FORCE2D(TP00RU03CP0000_pts2D_C.GEOMETRY), ST_FORCE2D(GEOMETRY())) LIMIT 1).
+10. Click on the "Ok" button.
+11. Click on the "Ok" button to finish the topology plan creation.
+12. Execute the topology plan.
+13. On *Inspector de errores del Plan de topologia* window select the only one record.
+14. Click on *Acciones* icon and select *Delete Action*.
 
 
 ### Expected result

@@ -4,7 +4,7 @@
 
 ### Description
 
-This test case checks the topology rule when we use correct 2D datasets. The case seeks a correct final result if we use corrects datasets and a right check expression.
+This test case checks the topology rule when we use correct 2D datasets. The case seeks a correct final result if we use corrects datasets and a right check expression. All polygons have al least one internal point and does the check expression True.
 
 ### Requirements
 
@@ -18,14 +18,13 @@ This test case checks the topology rule when we use correct 2D datasets. The cas
 3. Create a new empty topology plan.
 4. Fill the basic topology plan data.
 5. Add the **TP00RU03CP0000_pol2D_C.csv** file like a dataset.
-6. Add the **TP00RU03CP0000_pts2D_C.csv** file like a dataset.
-7. Add a new rules parameters on Rules tab.
-8. On those rule parameters identify the *primary dataset*, the *second dataset*, the *User defined topology rule* and the *tolerancy*. This tolerancy can be zero or greater.
-9. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
-10. Add the user check expression.
-11. Click on the "Ok" button.
-12. Click on the "Ok" button to finish the topology plan creation.
-13. Execute the topology plan.
+6. Add a new rules parameters on Rules tab.
+7. On those rule parameters identify the *primary dataset*, the *User defined topology rule*. 
+8. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
+9. Add the user check expression with expression builder; EXISTS( SELECT * FROM TP00RU03CP0000_pts2D_C WHERE ST_INTERSECTS(ST_FORCE2D(TP00RU03CP0000_pts2D_C.GEOMETRY), ST_FORCE2D(GEOMETRY())) LIMIT 1).
+10. Click on the "Ok" button.
+11. Click on the "Ok" button to finish the topology plan creation.
+12. Execute the topology plan.
 
 ### Expected result
 
