@@ -9,7 +9,7 @@ This test case checks alphanumeric dataset on UDR. This data generate a record o
 ### Requirements
 
 1. Have *gvSIG desktop 2.5.1* and *Topology framework plugin* installed.
-2. Have acces to [**TP00RU03CP0004_UDR_AN.csv**]().
+2. Have acces to [**TP00RU03CP0004_UDR_AN.csv**](https://github.com/jolicar/TopologyRuleUserDefinedRule/blob/master/testing/cases/TP00_TopologyRules/RU03_UserDefinedRule/CP0004_UDR_AN/TP00RU03CP0004_UDR_AN.csv).
 
 ### Steps...
 
