@@ -21,7 +21,7 @@ This test case checks the UDR when we use incorrect 2D point datasets and correc
 6. Add a new rules parameters on Rules tab.
 7. On those rule parameters identify the *primary dataset*, the *User defined topology rule*. 
 8. If *User defined topology rule* is selected, the UDR Parameters tab will be enabled.
-9. Add the user check expression with expression builder; EXISTS( SELECT * FROM TP00RU03CP0000_pts2D_C WHERE ST_INTERSECTS(ST_FORCE2D(TP00RU03CP0000_pts2D_C.GEOMETRY), ST_FORCE2D(GEOMETRY())) LIMIT 1).
+9. Add the user check expression with expression builder; EXISTS( SELECT * FROM TP00RU03CP0001_pol2D_C WHERE ST_INTERSECTS(ST_FORCE2D(TP00RU03CP0001_pts2D_I.GEOMETRY), ST_FORCE2D(GEOMETRY())) LIMIT 1).
 10. Click on the "Ok" button.
 11. Click on the "Ok" button to finish the topology plan creation.
 12. Execute the topology plan.
