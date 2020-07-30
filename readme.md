@@ -7,6 +7,6 @@
 
 * **Potential fixes actions:** 
   - **Delete** The delete action removes features for cases when *User Defined rule* Topology Rule it is false.
-  - **User correction formula** This option will be different on each work.
+  - **User corrective expression** This option will be different on each work.
 
 #### [*Back to GSoC2020 Project Wiki*](https://github.com/jolicar/GSoC2020/wiki/GSoC2020-New-rules-for-the-Topology-Framework-in-gvSIG-Desktop)
