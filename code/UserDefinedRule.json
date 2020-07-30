@@ -1,0 +1,22 @@
+{
+    "id": "UserDefinedRule",
+    "name": "User Defined Rule GSoC2020",
+    "description": [ 
+        "",     
+        " This rule allows the user to define a data check expression and another expression to correct it. The dataset features are evaluated for the check expression and it gives a boolean. If the result is False,the feature dont fulfill the rule and it creates a entry in the error report. If the result is True, the feature fulfills the expression. On Inspector de errores del Plan de topologia window we can remove the feature or apply the corrective expression.\n \n NOTE 1: The check and corrective expression are create on gvSIG Cosa languaje. "
+    ],
+    "actions" : {
+        "DeleteFeatureAction": {
+            "name" : "Delete feature action",
+            "description": [ 
+            "The delete action removes features for cases when User Defined rule Topology Rule it is false."
+            ]
+        },
+        "UserCorrectiveExpression": {
+            "name" : "User corrective expression",
+            "description": [ 
+            "This option will be different on each work."
+            ]
+        }
+    }
+}
