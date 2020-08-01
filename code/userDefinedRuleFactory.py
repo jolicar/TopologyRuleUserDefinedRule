@@ -23,7 +23,7 @@ class UserDefinedRuleFactory(AbstractTopologyRuleFactory):
             self,
             "UserDefinedRule",
             "User defined rule GSoC2020",
-            "This rule allows the user to define a data check expression and another expression to correct it. The dataset features are evaluated for the check expression and it gives a boolean. If the result is False,the feature dont fulfill the rule and it creates a entry in the error report. If the result is True, the feature fulfills the expression. On Inspector de errores del Plan de topologia window we can remove the feature or apply the corrective expression. /n The check and corrective expression are create on gvSIG Cosa languaje.",
+            "This rule allows the user to define a data check expression and another expression to correct it. The dataset features are evaluated for the check expression and it gives a boolean. If the result is False,the feature dont fulfill the rule and it creates a entry in the error report. If the result is True, the feature fulfills the expression. On Inspector de errores del Plan de topologia window we can remove the feature or apply the corrective expression. \n\n The check and corrective expression are create on gvSIG Cosa languaje.",
             None
         )
 

@@ -13,11 +13,15 @@ from org.gvsig.topology.lib.spi import AbstractTopologyRule
 from org.gvsig.expressionevaluator import ExpressionUtils
 from org.gvsig.fmap.dal import DALLocator
 
+from deleteFeatureAction import DeleteFeatureAction 
+
 class UserDefinedRule(AbstractTopologyRule):
 
 
   def __init__(self, plan, factory, tolerance, dataSet1):
       AbstractTopologyRule.__init__(self, plan, factory, tolerance, dataSet1)
+      self.addAction(DeleteFeatureAction())
+      
       self.checkExpression=None
       self.fst=None
 
@@ -40,7 +44,7 @@ class UserDefinedRule(AbstractTopologyRule):
                 -1,
                 -1,
                 False,
-                "ND",
+                "This feature does False the Check Expression",
                 ""
               )
       except:
