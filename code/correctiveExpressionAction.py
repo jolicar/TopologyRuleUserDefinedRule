@@ -32,7 +32,7 @@ class CorrectiveExpressionAction(AbstractTopologyRuleAction):
               self.correcExpression = ExpressionUtils.createExpression(formula)
               datamanager = DALLocator.getDataManager()
               self.fst = datamanager.createFeatureSymbolTable()
-              self.fst.setFeature(line.getFeature1().getFeature()) #line.getFeature1() devuelve una feature reference y self.fst.setFeature necesita un feature
+              self.fst.setFeature(line.getFeature1().getFeature()) 
               self.correcExpression.execute(self.fst)
         except:
             ex = sys.exc_info()[1]
