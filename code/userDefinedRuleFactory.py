@@ -35,8 +35,8 @@ class UserDefinedRuleFactory(AbstractTopologyRuleFactory):
         
         dynObjectManager = ToolsLocator.getDynObjectManager()
         self.parametersDefinition = dynObjectManager.createDynClass("UserDefinedRuleParameters", "UserDefinedRuleParameters")
-        self.parametersDefinition.addDynFieldString("CheckExpression").setLabel("Check expression").setDescription("BLA")
-        self.parametersDefinition.addDynFieldString("CorrectiveExpression").setLabel("Corrective expression").setDescription("BLA")
+        self.parametersDefinition.addDynFieldString("CheckExpression").setLabel("Check expression").setDescription("")
+        self.parametersDefinition.addDynFieldString("CorrectiveExpression").setLabel("Corrective expression").setDescription("")
     
     def createRule(self, plan, dataSet1, dataSet2, tolerance):
         rule = UserDefinedRule(plan, self, tolerance, dataSet1)

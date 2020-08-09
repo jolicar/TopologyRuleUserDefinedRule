@@ -13,7 +13,8 @@ from org.gvsig.topology.lib.spi import AbstractTopologyRule
 from org.gvsig.expressionevaluator import ExpressionUtils
 from org.gvsig.fmap.dal import DALLocator
 
-from deleteFeatureAction import DeleteFeatureAction 
+from deleteFeatureAction import DeleteFeatureAction
+from correctiveExpressionAction import CorrectiveExpressionAction
 
 class UserDefinedRule(AbstractTopologyRule):
 
@@ -21,6 +22,7 @@ class UserDefinedRule(AbstractTopologyRule):
   def __init__(self, plan, factory, tolerance, dataSet1):
       AbstractTopologyRule.__init__(self, plan, factory, tolerance, dataSet1)
       self.addAction(DeleteFeatureAction())
+      self.addAction(CorrectiveExpressionAction())
       
       self.checkExpression=None
       self.fst=None
@@ -28,7 +30,8 @@ class UserDefinedRule(AbstractTopologyRule):
   def check(self, taskStatus, report, feature1):
       try:
           if self.checkExpression==None:
-              self.checkExpression = ExpressionUtils.createExpression(self.getParameters().getDynValue("CheckExpression"))
+              formula = self.getParameters().getDynValue("CheckExpression")
+              self.checkExpression = ExpressionUtils.createExpression(formula)
               datamanager = DALLocator.getDataManager()
               self.fst = datamanager.createFeatureSymbolTable()
           self.fst.setFeature(feature1)

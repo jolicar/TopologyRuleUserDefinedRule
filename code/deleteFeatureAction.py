@@ -10,7 +10,7 @@ class DeleteFeatureAction(AbstractTopologyRuleAction):
     def __init__(self):
         AbstractTopologyRuleAction.__init__(
             self,
-      "userDefinedRule",
+            "userDefinedRule",
             "DeleteFeatureAction",
             "Delete Feature Action",
             "The delete action removes features for cases when User Defined rule Topology Rule it is false."
